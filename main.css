@@ -65,4 +65,5 @@ body {
     transform: translate(-50%, -50%);
     font-family: 'shantanu-book';
     font-size: 1.5em;
+    text-align: center;
 }
