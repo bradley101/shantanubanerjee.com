@@ -1,8 +1,62 @@
 html,
 body {
-    padding: 0%;
+    width: 100%;
+    overflow-x: hidden;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    -webkit-hyphens: none;
+    hyphens: none;
+}
+
+body {
+    background-color: white;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    margin: 0%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-shadow: none;
+}
+
+@font-face {
+    font-family: "shantanu-bold";
+    src: url(font/circularstd-bold.woff2) format("woff2"),
+        url(font/circularstd-bold.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "shantanu-book";
+    src: url(font/circularstd-book.woff2) format("woff2"),
+        url(font/circularstd-book.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "shantanu-medium";
+    src: url(font/circularstd-medium.woff2) format("woff2"),
+        url(font/circularstd-medium.woff) format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-shadow: none;
 }
 
 .hero-img {
