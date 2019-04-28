@@ -8,7 +8,7 @@ body {
 	text-align: center;
 }
 #intro-1 {
-	height: calc(100vh - 150px);
+	height: calc(100vh - 50px);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -36,6 +36,9 @@ body {
 	width: inherit;
 }
 @media screen and (max-width: 410px) {
+	#intro-1 {
+		height: calc(100vh - 150px);
+	}
 	#photo img {
 		height: 150px;
 		width: 150px;
