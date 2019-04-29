@@ -35,24 +35,24 @@ body {
 
 @font-face {
     font-family: "shantanu-bold";
-    src: url(/files/font/circularstd-bold.woff2) format("woff2"),
-        url(/files/font/circularstd-bold.woff) format("woff");
+    src: url(../font/circularstd-bold.woff2) format("woff2"),
+        url(../font/circularstd-bold.woff) format("woff");
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "shantanu-book";
-    src: url(/files/font/circularstd-book.woff2) format("woff2"),
-        url(/files/files/font/circularstd-book.woff) format("woff");
+    src: url(../font/circularstd-book.woff2) format("woff2"),
+        url(../font/circularstd-book.woff) format("woff");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: "shantanu-medium";
-    src: url(/files/files/font/circularstd-medium.woff2) format("woff2"),
-        url(/files/files/font/circularstd-medium.woff) format("woff");
+    src: url(../font/circularstd-medium.woff2) format("woff2"),
+        url(../font/circularstd-medium.woff) format("woff");
     font-weight: 700;
     font-style: normal;
 }
