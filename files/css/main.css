@@ -37,7 +37,7 @@ body {
 }
 @media screen and (max-width: 410px) {
 	#intro-1 {
-		height: calc(100vh - 150px);
+		height: calc(100vh);
 	}
 	#photo img {
 		height: 150px;
