@@ -45,5 +45,8 @@
 		blink();
 		setInterval(blink, 10000);
 	}
-	window.onload = setRepeat;
+	let init = () => {
+		setRepeat();
+	}
+	window.onload = init;
 })();

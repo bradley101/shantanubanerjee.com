@@ -31,10 +31,6 @@ body {
 	font-family: 'shantanu-bold';
 	color: rgb(26, 26, 26);
 }
-#coming-soon {
-	margin: 0 auto;
-	width: inherit;
-}
 @media screen and (max-width: 410px) {
 	#intro-1 {
 		height: calc(100vh);
