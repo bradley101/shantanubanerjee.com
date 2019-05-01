@@ -3,18 +3,33 @@ body {
 }
 #container {
 	width: 100%;
-	padding-left: 10%;
-	padding-right: 10%;
+	/* padding-left: 10%;
+	padding-right: 10%; */
 	text-align: center;
 }
 #intro-1 {
-	height: calc(100vh - 50px);
+	height: calc(100vh);
+	display: grid;
+	grid-template-rows: 50px 1fr;
+}
+#links {
+	grid-row-start: 1; grid-row-end: 2;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+#links > div {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	font-family: 'shantanu-book';
+}
+#links > div:nth-child(1) {
+	justify-self: flex-start;
+}
+#links > div:nth-child(2) {
+	justify-self: flex-end;
 }
 #photo {
+	grid-row-start: 2; grid-row-end: 3;
 	width: 100%; height: auto;
 	text-align: center;
 	align-self: center; 
@@ -32,6 +47,10 @@ body {
 	color: rgb(26, 26, 26);
 }
 @media screen and (max-width: 410px) {
+	body {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 	#intro-1 {
 		height: calc(100vh);
 	}
@@ -42,4 +61,13 @@ body {
 	#photo p {
 		font-size: 1.2em;
 	}
+}
+#projects, #contact {
+	height: 100vh;
+}
+#projects {
+	background-color: orange;
+}
+#contact {
+	background-color: olivedrab;
 }
