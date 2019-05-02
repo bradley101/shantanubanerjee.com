@@ -12,6 +12,7 @@ body {
 	height: calc(100vh);
 	display: grid;
 	grid-template-rows: 50px 1fr;
+	position: relative;
 }
 #links {
 	grid-row-start: 1; grid-row-end: 2;
