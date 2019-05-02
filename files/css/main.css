@@ -17,7 +17,7 @@ body {
 #links {
 	grid-row-start: 1; grid-row-end: 2;
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr 1fr 8fr;
 	position: sticky;
 	top: 0;
 }
@@ -26,10 +26,10 @@ body {
 	align-items: center;
 	font-family: 'shantanu-book';
 }
-#links > div:nth-child(1) {
+#links > div:nth-child(1), #links > div:nth-child(2) {
 	justify-self: flex-start;
 }
-#links > div:nth-child(2) {
+#links > div:nth-child(3) {
 	justify-self: flex-end;
 }
 #photo {
@@ -58,6 +58,9 @@ body {
 	}
 	#intro-1 {
 		height: calc(100vh);
+	}
+	#links {
+		grid-template-columns: 1fr 1fr 2fr;
 	}
 	#photo img {
 		height: 150px;
