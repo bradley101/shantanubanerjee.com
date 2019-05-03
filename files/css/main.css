@@ -1,6 +1,8 @@
 body {
-	padding-left: 50px; padding-right: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
 }
+
 #container {
 	width: 100%;
 	/* padding-left: 10%;
@@ -8,60 +10,76 @@ body {
 	text-align: center;
 	position: relative;
 }
+
 #intro-1 {
 	height: calc(100vh);
 	display: grid;
 	grid-template-rows: 50px 1fr;
 	position: relative;
 }
+
 #links {
-	grid-row-start: 1; grid-row-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	position: sticky;
 	top: 0;
 }
-#links > div {
+
+#links>div {
 	display: flex;
 	align-items: center;
 	font-family: 'shantanu-book';
 }
-#links > div:nth-child(1) {
+
+#links>div:nth-child(1) {
 	justify-self: flex-start;
 }
-#links > div:nth-child(2) {
+
+#links>div:nth-child(2) {
 	justify-self: center;
 }
-#links > div:nth-child(3) {
+
+#links>div:nth-child(3) {
 	justify-self: flex-end;
 }
+
 #photo {
-	grid-row-start: 2; grid-row-end: 3;
-	width: 100%; height: auto;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	width: 100%;
+	height: auto;
 	text-align: center;
-	align-self: center; 
-	position: sticky; top: 0;
+	align-self: center;
+	position: sticky;
+	top: 0;
 }
+
 #photo img {
 	height: 250px;
 	width: 250px;
 	object-fit: contain;
 	border-radius: 50%;
 }
+
 #photo p {
 	font-size: 2em;
 	width: 100%;
 	font-family: 'shantanu-bold';
 	color: rgb(26, 26, 26);
 }
+
 @media screen and (max-width: 410px) {
 	body {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+
 	#intro-1 {
 		height: calc(100vh);
 	}
+
 	/* #links {
 		grid-template-columns: 1fr 1fr 2fr;
 	} */
@@ -69,35 +87,55 @@ body {
 		height: 150px;
 		width: 150px;
 	}
+
 	#photo p {
 		font-size: 1.2em;
 	}
 }
-#projects, #contact {
+
+#projects,
+#contact {
 	height: 100vh;
 	display: grid;
-	
+
 }
+
 #projects {
 	/* background-color: orange; */
 	height: 100vh;
 }
+
 #contact {
 	/* background-color: olivedrab; */
-	height: 50vh;
-	grid-template-rows: 100px 80px 80px 50px;
+	height: 60vh;
+	grid-template-rows: 137px 80px 80px 50px;
 }
-#contact > div:nth-child(1) {
+
+#contact>div:nth-child(1) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 1.5em;
+	font-size: 2.5em;
 }
+
 #social-divs {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	justify-content: center;
+	display: flex;
 }
-#contact > div:nth-child(4) {
+
+#social-divs img {
+	height: 35px;
+}
+
+#social-divs>a:nth-child(2) {
+	padding-left: 40px;
+}
+
+#social-divs>a:nth-child(3) {
+	padding-left: 40px;
+}
+
+#contact>div:nth-child(4) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
