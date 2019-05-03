@@ -75,10 +75,30 @@ body {
 }
 #projects, #contact {
 	height: 100vh;
+	display: grid;
+	
 }
 #projects {
-	background-color: orange;
+	/* background-color: orange; */
+	height: 100vh;
 }
 #contact {
-	background-color: olivedrab;
+	/* background-color: olivedrab; */
+	height: 50vh;
+	grid-template-rows: 100px 80px 80px 50px;
+}
+#contact > div:nth-child(1) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5em;
+}
+#social-divs {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+#contact > div:nth-child(4) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
