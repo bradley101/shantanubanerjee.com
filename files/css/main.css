@@ -140,3 +140,39 @@ body {
 	align-items: center;
 	justify-content: center;
 }
+
+#about {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr;
+	column-gap: 20px;
+}
+
+#about-1 {
+	height: inherit;
+	/* background-color: blueviolet; */
+	/* padding: 20px; */
+	text-align: left;
+	font-size: 1.4em;
+}
+#about-1::first-letter {
+	font-size: 3em;
+	font-family: 'Dancing Script', cursive;
+	color: green;
+}
+
+
+#about-2 {
+	height: inherit;
+	background-color: coral;
+}
+@media screen and (max-width:810px) {
+	#about {
+		height: auto;
+		grid-template-columns: 1fr;
+		grid-template-rows: minmax(100vh, auto) minmax(50vh, auto);
+		row-gap: 20px;
+		/* column-gap: 20px; */
+	}
+}
