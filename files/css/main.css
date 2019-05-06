@@ -184,7 +184,7 @@ body {
 
 #about-2 {
 	height: inherit;
-	background-color: coral;
+	/* background-color: coral; */
 }
 @media screen and (max-width:810px) {
 	#about {
