@@ -26,6 +26,10 @@ body {
 	position: sticky;
 	top: 0;
 }
+.links {
+	text-decoration: none;
+	color: black;
+}
 
 #links>div {
 	display: flex;
@@ -57,14 +61,14 @@ body {
 }
 
 #photo img {
-	height: 250px;
-	width: 250px;
+	height: 300px;
+	width: 300px;
 	object-fit: contain;
 	border-radius: 50%;
 }
 
 #photo p {
-	font-size: 2em;
+	font-size: 2.5em;
 	width: 100%;
 	font-family: 'shantanu-bold';
 	color: rgb(26, 26, 26);
@@ -84,12 +88,19 @@ body {
 		grid-template-columns: 1fr 1fr 2fr;
 	} */
 	#photo img {
-		height: 150px;
-		width: 150px;
+		height: 200px;
+		width: 200px;
 	}
 
 	#photo p {
+		font-size: 1.8em;
+	}
+
+	#about {
 		font-size: 1.2em;
+	}
+	#contact>div:nth-child(1) {
+		font-size: 2em;
 	}
 }
 
@@ -116,7 +127,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 2.5em;
+	/* font-size: 2.5em; */
 }
 
 #social-divs {
@@ -152,22 +163,37 @@ body {
 
 #about {
 	display: grid;
-	height: 100vh;
+	height: auto;
+	min-height: 70vh;
 	grid-template-columns: 2fr 1fr;
 	grid-template-rows: 1fr;
 	column-gap: 20px;
 }
 
-#about-1 {
+#about-1, #about-2 {
 	height: inherit;
 	/* background-color: blueviolet; */
 	/* padding: 20px; */
 	text-align: left;
-	font-size: 1.4em;
+	/* font-size: 1.4em; */
 }
-#about-1::first-letter {
+
+@media screen and (min-width: 410px) {
+	#about {
+		font-size: 1.4em;
+	}
+	#contact>div:nth-child(1) {
+		font-size: 2.5em;
+	}
+}
+
+#about-1 p:first-of-type::first-letter {
 	font-size: 3em;
 	font-family: 'Dancing Script', cursive;
+	color: currentColor;
+}
+#about-1 p a {
+	text-decoration: none;
 	color: green;
 }
 
@@ -180,8 +206,11 @@ body {
 	#about {
 		height: auto;
 		grid-template-columns: 1fr;
-		grid-template-rows: minmax(100vh, auto) minmax(50vh, auto);
+		grid-template-rows: auto auto; /*minmax(100vh, auto) minmax(50vh, auto);*/
 		row-gap: 20px;
 		/* column-gap: 20px; */
 	}
+}
+#about-2 ul li {
+	margin-bottom: 15px;
 }
