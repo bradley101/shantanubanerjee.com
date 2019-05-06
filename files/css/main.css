@@ -107,8 +107,7 @@ body {
 
 #contact {
 	/* background-color: olivedrab; */
-	height: auto;
-	margin-bottom: 30px;
+	height: 60vh;
 	grid-template-rows: 137px 80px 80px 50px;
 }
 
