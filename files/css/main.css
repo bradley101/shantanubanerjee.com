@@ -25,6 +25,7 @@ body {
 	grid-template-columns: 1fr 1fr 1fr;
 	position: sticky;
 	top: 0;
+	font-size: 1.2em;
 }
 .links {
 	text-decoration: none;
@@ -101,6 +102,9 @@ body {
 	}
 	#contact>div:nth-child(1) {
 		font-size: 2em;
+	}
+	#links {
+		font-size: 1em;
 	}
 }
 
