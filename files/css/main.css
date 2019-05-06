@@ -26,6 +26,10 @@ body {
 	position: sticky;
 	top: 0;
 }
+.links {
+	text-decoration: none;
+	color: black;
+}
 
 #links>div {
 	display: flex;
