@@ -25,6 +25,7 @@ body {
 	grid-template-columns: 1fr 1fr 1fr;
 	position: sticky;
 	top: 0;
+	font-size: 1.2em;
 }
 .links {
 	text-decoration: none;
@@ -61,8 +62,10 @@ body {
 }
 
 #photo img {
-	height: 300px;
-	width: 300px;
+	height: 60%;
+	width: 60%;
+	max-width: 300px;
+	max-height: 300px;
 	object-fit: contain;
 	border-radius: 50%;
 }
@@ -96,11 +99,14 @@ body {
 		font-size: 1.8em;
 	}
 
-	#about {
+	#about, #projects {
 		font-size: 1.2em;
 	}
 	#contact>div:nth-child(1) {
 		font-size: 2em;
+	}
+	#links {
+		font-size: 1em;
 	}
 }
 
@@ -113,7 +119,8 @@ body {
 
 #projects {
 	/* background-color: orange; */
-	height: 100vh;
+	height: auto;
+	text-align: left;
 }
 
 #contact {
@@ -179,7 +186,7 @@ body {
 }
 
 @media screen and (min-width: 410px) {
-	#about {
+	#about, #projects {
 		font-size: 1.4em;
 	}
 	#contact>div:nth-child(1) {
@@ -202,7 +209,7 @@ body {
 	height: inherit;
 	/* background-color: coral; */
 }
-@media screen and (max-width:810px) {
+@media screen and (max-width:710px) {
 	#about {
 		height: auto;
 		grid-template-columns: 1fr;
