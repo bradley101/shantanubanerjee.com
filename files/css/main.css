@@ -221,3 +221,26 @@ body {
 #about-2 ul li {
 	margin-bottom: 15px;
 }
+
+#project-container {
+	/* display: grid; */
+}
+ul {
+	/* display: inline; */
+	list-style-type: none;
+}
+ul > li {
+	display: inline-block;
+}
+.project {
+	padding: 10px;
+	width: 100%;
+	height: 30vh;
+	border-radius: 10px;
+	-webkit-box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    2px 2px 5px 0px rgba(50, 50, 50, 0.5);
+	box-shadow:         2px 2px 5px 0px rgba(50, 50, 50, 0.5);
+}
+.project-summary {
+	width: inherit;
+}
