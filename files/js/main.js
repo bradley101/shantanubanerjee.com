@@ -80,14 +80,19 @@
 			if (initX === null || initY === null) return;
 			curX = e.touches[0].clientX;
 			curY = e.touches[0].clientY;
-			if (curX > initX) {
-				console.log(`swipe right: ${curX - initX}`);
-			} else {
-				console.log('swipe left');
+			// if (curX > initX) {
+			// 	console.log(`swipe right: ${curX - initX}`);
+			// } else {
+			// 	console.log('swipe left');
+			// }
+			if (((curX - initX) <0 && Math.abs($('#project-container').offset().left) + $('#projects').width() <= $('#project-container').width() - 70) ||
+				(curX - initX) > 0 && Math.abs($('#project-container').offset().left < 50)) {
+				curPos += curX - initX;
+				if (curPos > 0) curPos = 0;
+				if (curPos < $('#project-container').width() - $('#projects').width() - 70) curpos = $('#project-container').width() - $('#projects').width() - 70;
+				projectContainer.style.transform = `translateX(${curPos}px)`;
+				initX = curX;
 			}
-			curPos += curX - initX;
-			projectContainer.style.transform = `translateX(${curPos}px)`;
-			initX = curX;
 			e.preventDefault();
 		}, false);
 	};
