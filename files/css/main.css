@@ -121,6 +121,7 @@ body {
 	/* background-color: orange; */
 	height: auto;
 	text-align: left;
+	position: relative;
 }
 
 #contact {
@@ -253,4 +254,18 @@ body {
 	/* width: inherit	; */
 	color: #333;
 	font-size: 0.9em;
+}
+.scroll-icon {
+	position: absolute;
+	top: 50%;
+	width: 50px; height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	font-size: 1.5em !important;
+}
+.scroll-icon:hover {
+	color: white;
+	background-color: #888;
 }
