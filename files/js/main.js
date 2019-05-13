@@ -67,8 +67,38 @@
 		blink();
 		setInterval(blink, 15000);
 	}
+	let setTouchReceiver = () => {
+		let initX = null, initY = null, curX = null, curY = null;
+		let curPos = 0;
+		let projectContainer = document.getElementById('project-container');
+		projectContainer.addEventListener('touchstart', (e) => {
+			initX = e.touches[0].clientX;
+			initY = e.touches[0].clientY;
+			e.preventDefault();
+		}, false);
+		projectContainer.addEventListener('touchmove', (e) => {
+			if (initX === null || initY === null) return;
+			curX = e.touches[0].clientX;
+			curY = e.touches[0].clientY;
+			// if (curX > initX) {
+			// 	console.log(`swipe right: ${curX - initX}`);
+			// } else {
+			// 	console.log('swipe left');
+			// }
+			if (((curX - initX) <0 && Math.abs($('#project-container').offset().left) + $('#projects').width() <= $('#project-container').width() - 70) ||
+				(curX - initX) > 0 && Math.abs($('#project-container').offset().left < 50)) {
+				curPos += curX - initX;
+				if (curPos > 0) curPos = 0;
+				if (curPos < $('#project-container').width() - $('#projects').width() - 70) curpos = $('#project-container').width() - $('#projects').width() - 70;
+				projectContainer.style.transform = `translateX(${curPos}px)`;
+				initX = curX;
+			}
+			e.preventDefault();
+		}, false);
+	};
 	let init = () => {
 		// setRepeat();
+		setTouchReceiver();
 	}
 	window.onload = init;
 })();
