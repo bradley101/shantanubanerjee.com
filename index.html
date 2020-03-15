@@ -29,7 +29,7 @@
       <div id="about-1">
 				<h2>About me</h2>
 				<p>
-        	Hi! I am 23 years old professional, working as a Software Engineer. I love problem solving and competetive programming. I make sure to devote sometime everyday to this, learning new algorithms and seeing other's solutions.
+        	Hi! I am <span id="d-age"></span> years old professional, working as a Software Engineer. I love problem solving and competetive programming. I make sure to devote sometime everyday to this, learning new algorithms and seeing other's solutions.
 				</p>
 				<p>
 					I like hitting keyboard to build awesome tools and software. I’ve worked on Front-end as well as Backend development. I am into Android application development.
@@ -91,6 +91,12 @@
 
   <script src="files/js/jquery-3.3.1.min.js"></script>
   <script src="files/js/main.js"></script>
+  <script>
+    let sage = document.getElementById('d-age');
+    let dob = new Date();
+    dob.setDate(1); dob.setMonth(6); dob.setFullYear(1995);
+    sage.innerHTML = `${parseInt((new Date() - dob) / 31536000000)}`;
+  </script>
 </body>
 
 </html>
