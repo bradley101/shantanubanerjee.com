@@ -75,7 +75,7 @@
     $.ajax({
       url: 'https://us-central1-shantanubanerjeedotcom.cloudfunctions.net/getInnerHtml',
       success: (result) => {
-        console.log(result);
+        // console.log(result);
         $("#about-1 > div").html(result.about);
         $("#about-2 > ul").html(result.skills);
         let sage = document.getElementById('d-age');
