@@ -22,7 +22,7 @@ exports.dbTrigger = functions.firestore.document('static/type1').onWrite((change
 exports.getInnerHtml = functions.https.onRequest((req, res) => {
     db.collection('static').doc('type1').get().then(doc => {
         if (doc.exists) {
-            res.status(200).contentType('application/json').send(doc.data());
+            res.status(200).set('Access-Control-Allow-Origin', '*').contentType('application/json').send(doc.data());
         }
         return true;
     }).catch(err => {
