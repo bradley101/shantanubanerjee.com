@@ -1,6 +1,7 @@
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 const serviceAccount = require(__dirname + '/shantanubanerjeedotcom-firebase-adminsdk-ghboc-956bd759c8.json');
+const cors = require('cors') ({origin: true});
 let _ = class {};
 
 admin.initializeApp({
