@@ -96,6 +96,12 @@
     let dob = new Date();
     dob.setDate(1); dob.setMonth(6); dob.setFullYear(1995);
     sage.innerHTML = `${parseInt((new Date() - dob) / 31536000000)}`;
+    $.ajax({
+      url: 'https://us-central1-shantanubanerjeedotcom.cloudfunctions.net/getInnerHtml',
+      success: (result) => {
+        console.log(result);
+      }
+    });
   </script>
 </body>
 
